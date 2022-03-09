@@ -51,6 +51,17 @@ h4 {
   line-height: 2rem;
 }
 
+button {
+  background: var(--dark-cyan);
+  color: var(--light-cream);
+  padding: 1em 3em;
+  font-size: 1.125em;
+  font-weight: 900;
+  border: none;
+  border-radius: 6px;
+  line-height: 25px;
+}
+
 body {
   font-family: var(--secondary-font);
   line-height: 1.625rem;
@@ -93,11 +104,11 @@ header {
 .hamburgerMenu {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
   background: linear-gradient(
     180deg,
-    rgba(242, 242, 242, 1) 42%,
-    rgba(242, 242, 242, 0.4) 100%
+    rgba(242, 242, 242, 1) 50%,
+    rgba(242, 242, 242, 0.5) 100%
   );
   margin-top: 2rem;
   padding-top: 3rem;
@@ -128,3 +139,68 @@ header {
 /********** 
   HOME 
 ***********/
+
+#create-plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6.25em 0.5em;
+  margin: 0 1.5em;
+  background: url('./assets/home/mobile/image-hero-coffeepress.jpg');
+  background-size: cover;
+  border-radius: 10px;
+  color: var(--light-cream);
+}
+
+#create-plan > h2 {
+  background: none;
+}
+
+#create-plan > p {
+  padding: 1.5em 1em 2.5em;
+  font-size: 15px;
+  background: none;
+  font-family: var(--secondary-font);
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+#create-plan > button {
+  padding: 1em 2em;
+}
+
+#collection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 7.5em 2em;
+}
+
+#collection > h1 {
+  font-size: 2.5em;
+  padding-bottom: 24px;
+}
+
+.collection-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.collection-item > img {
+  width: 65%;
+  height: auto;
+}
+
+.collection-item > p {
+  padding-top: 1em;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+}
