@@ -16,7 +16,7 @@
   box-sizing: border-box;
   padding: 0;
   font-family: var(--main-font);
-  background: #f2f2f2;
+  background: var(--light-cream);
   list-style: none;
 }
 
@@ -107,8 +107,8 @@ header {
   height: 90vh;
   background: linear-gradient(
     180deg,
-    rgba(242, 242, 242, 1) 50%,
-    rgba(242, 242, 242, 0.5) 100%
+    rgba(254, 252, 247, 1) 50%,
+    rgba(254, 252, 247, 0.5) 100%
   );
   margin-top: 2rem;
   padding-top: 3rem;
@@ -134,6 +134,50 @@ header {
 
 .disabled {
   display: none;
+}
+
+/********** 
+  FOOTER
+***********/
+footer {
+  margin: 0 1.5em;
+  margin-bottom: 4em;
+  background: #2c343e;
+}
+
+footer,
+footer ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #2c343e;
+}
+
+footer > img {
+  padding: 54px 55px 30px 55px;
+}
+
+footer > ul > li {
+  padding: 12px;
+}
+
+footer > ul > li > p {
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1;
+  color: var(--grey);
+  background: none;
+}
+
+footer div {
+  background: inherit;
+}
+
+footer > div > img {
+  padding: 48px 12px;
 }
 
 /********** 
@@ -177,12 +221,19 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 7.5em 2em;
+  padding: 7.5em 2em 0;
 }
+
+/********** 
+  HOME - COLLECTIONS
+***********/
 
 #collection > h1 {
   font-size: 2.5em;
   padding-bottom: 24px;
+  background: -webkit-linear-gradient(#83888f, #eee 68%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .collection-item {
@@ -192,15 +243,149 @@ header {
   align-items: center;
   text-align: center;
   padding: 1rem;
+  color: var(--dark-grey-blue);
+  padding-bottom: 3em;
 }
 
 .collection-item > img {
   width: 65%;
   height: auto;
+  margin-bottom: 2em;
 }
 
 .collection-item > p {
   padding-top: 1em;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/********** 
+  HOME - WHY CHOOSE US?
+***********/
+
+#why-choose-us {
+  padding: 2em 1em;
+  width: 100%;
+  position: relative;
+  margin-bottom: 717px;
+}
+
+#why-choose-us > #why-copy {
+  background: #2c343e;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  color: var(--light-cream);
+  text-align: center;
+  padding: 4em 1.5em 661px 1.5em;
+}
+
+#why-choose-us > #why-copy > h3 {
+  background: none;
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 1em;
+}
+
+#why-choose-us > #why-copy > p {
+  background: none;
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: normal;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+#benefit {
+  position: absolute;
+  top: 38%;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  left: 0;
+  flex-direction: column;
+  background: none;
+  gap: 1.5em;
+  margin-bottom: 7.5em;
+}
+
+.benefit-item {
+  background: var(--dark-cyan);
+  margin: 0 3em;
+  padding: 4.5em 1.5em 3em 1.5em;
+  border-radius: 0.5em;
+  color: var(--light-cream);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.benefit-item h3,
+img,
+p {
+  background: none;
+}
+
+.benefit-item h3 {
+  font-size: 1.5em;
+  margin: 2.5em 0 1em;
+}
+
+.benefit-item p {
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/********** 
+  HOME - PLAN 
+***********/
+
+#how-it-works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#how-it-works > h4 {
+  padding-bottom: 1.5em;
+  color: var(--grey);
+}
+
+#how-it-works > button {
+  padding: 0.9em 2em;
+  margin: 80px 0 120px 0;
+}
+
+.planItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3.5em 1.5em;
+  padding-bottom: 24px;
+}
+
+.planItem > h3 {
+  font-size: 4.5em;
+  line-height: 72px;
+  color: var(--pale-orange);
+}
+
+.planItem > h2 {
+  font-size: 1.75em;
+  padding: 24px 0;
+}
+
+.planItem > p {
   font-family: var(--secondary-font);
   font-size: 15px;
 }

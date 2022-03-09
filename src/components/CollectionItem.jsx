@@ -1,9 +1,9 @@
 import React from 'react';
 
-function CollectionItem({ title, text }) {
+function CollectionItem({ title, text, img }) {
   return (
     <div className='collection-item'>
-      <img src='./assets/home/desktop/image-gran-espresso.png' alt='' />
+      <img src={img} alt='' />
       <h4>{title}</h4>
       <p>{text}</p>
     </div>
