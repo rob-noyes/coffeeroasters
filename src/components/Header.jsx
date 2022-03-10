@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -28,13 +29,19 @@ const Header = () => {
       <div className={menu ? 'hamburgerMenu' : 'disabled'}>
         <ul>
           <li>
-            <h4>Home</h4>
+            <Link to='/' onClick={toggleMenu}>
+              <h4>Home</h4>
+            </Link>
           </li>{' '}
           <li>
-            <h4>About Us</h4>
+            <Link to='/about-us' onClick={toggleMenu}>
+              <h4>About Us</h4>
+            </Link>
           </li>{' '}
           <li>
-            <h4>Create Your Plan</h4>
+            <Link to='/plan' onClick={toggleMenu}>
+              <h4>Create Your Plan</h4>
+            </Link>
           </li>
         </ul>
       </div>
