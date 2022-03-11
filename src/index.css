@@ -382,6 +382,7 @@ p {
   text-align: center;
   padding: 3.5em 1.5em;
   padding-bottom: 24px;
+  background: none;
 }
 
 .planItem > h3 {
@@ -398,6 +399,7 @@ p {
 .planItem > p {
   font-family: var(--secondary-font);
   font-size: 15px;
+  font-weight: 300;
 }
 
 /********** 
@@ -495,4 +497,121 @@ p {
   font-weight: 300;
   line-height: 26px;
   color: var(--dark-grey-blue);
+}
+
+/************ 
+  SUBSCRIBE
+*************/
+
+#subscribe-landing {
+  padding: 101px 1.5em 136px;
+  background: url('./assets/plan/mobile/image-hero-blackcup.jpg');
+  background-size: cover;
+  color: var(--light-cream);
+  text-align: center;
+  margin: 0 1.5em 7.5em;
+  border-radius: 10px;
+}
+
+#subscribe-landing > h2 {
+  line-height: 40px;
+  padding-bottom: 22px;
+}
+
+#subscribe-landing > p {
+  font-family: var(--secondary-font);
+  font-size: 15px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}
+
+#subscribe-flow {
+  background: #2c343e;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  padding: 80px 24px 18px;
+  margin-bottom: 120px;
+  color: var(--light-cream);
+  text-align: center;
+}
+
+.subscribe-how-to-plan {
+  background: none;
+  padding-bottom: 56px;
+}
+
+.subscribe-how-to-plan > h3 {
+  font-size: 72px;
+  color: var(--pale-orange);
+  padding-bottom: 32px;
+}
+
+.subscribe-how-to-plan > h2 {
+  font-size: 28px;
+  line-height: 32px;
+  padding-bottom: 24px;
+}
+
+.subscribe-how-to-plan > p {
+  font-family: var(--secondary-font);
+  opacity: 0.8;
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.subscribe-question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5em;
+  padding-bottom: 2em;
+}
+
+.subscribe-question > h3 {
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--grey);
+  padding-right: 2em;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1.5em;
+  color: var(--dark-grey-blue);
+  height: 100%;
+  transition: height 0.5s ease-in;
+  margin-bottom: 96px;
+}
+
+.subscription-disabled {
+  display: none;
+  height: 0%;
+  transition: height 0.5s ease-in;
+}
+
+.subscription > div {
+  background: #f4f1eb;
+  border-radius: 8px;
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.subscription > div:hover {
+  background: #0e8784;
+  color: var(--light-cream);
+}
+
+.subscription h4 {
+  padding-bottom: 8px;
+  line-height: 32px;
+}
+
+.selected {
+  background: var(--dark-cyan);
+  color: var(--light-cream);
 }

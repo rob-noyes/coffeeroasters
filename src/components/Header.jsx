@@ -39,7 +39,7 @@ const Header = () => {
             </Link>
           </li>{' '}
           <li>
-            <Link to='/plan' onClick={toggleMenu}>
+            <Link to='/subscribe' onClick={toggleMenu}>
               <h4>Create Your Plan</h4>
             </Link>
           </li>
