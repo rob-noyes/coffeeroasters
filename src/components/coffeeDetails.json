@@ -37,7 +37,7 @@
           "desc":"Perfect option for a couple. Yields about 40 delectable cups."
        },
        "option3":{
-          "title":"250g",
+          "title":"1000g",
           "desc":"Perfect for offices and events. Yields about 90 delightful cups."
        }
     },
@@ -57,15 +57,15 @@
     },
     "deliver":{
        "option1":{
-          "title":"Every week",
+          "title":"Every Week",
           "desc":"$7.20 per shipment. Includes free first-class shipping."
        },
        "option2":{
-          "title":"Every 2 weeks",
+          "title":"Every 2 Weeks",
           "desc":"$9.60 per shipment. Includes free priority shipping."
        },
        "option3":{
-          "title":"Every month",
+          "title":"Every Month",
           "desc":"$12.00 per shipment. Includes free priority shipping."
        }
     }

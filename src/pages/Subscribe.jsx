@@ -52,17 +52,53 @@ export const Subscribe = () => {
       </div>
       <div id='subscribe-pick'>
         <SubscriptionItem
+          option='option1'
           question='How do you drink your coffee?'
           coffeeDetails={coffeeDetails.how}
           pickedOption={pickedOption}
           setPickedOption={setPickedOption}
         />
         <SubscriptionItem
+          option='option2'
           question='What type of coffee?'
           coffeeDetails={coffeeDetails.type}
           pickedOption={pickedOption}
           setPickedOption={setPickedOption}
         />
+        <SubscriptionItem
+          option='option3'
+          question='How much would you like?'
+          coffeeDetails={coffeeDetails.quantity}
+          pickedOption={pickedOption}
+          setPickedOption={setPickedOption}
+        />
+        <SubscriptionItem
+          option='option4'
+          question='Want us to grind them?'
+          coffeeDetails={coffeeDetails.grind}
+          pickedOption={pickedOption}
+          setPickedOption={setPickedOption}
+        />
+        <SubscriptionItem
+          option='option5'
+          question='How often should we deliver?'
+          coffeeDetails={coffeeDetails.deliver}
+          pickedOption={pickedOption}
+          setPickedOption={setPickedOption}
+        />
+      </div>
+      <div id='order-summary'>
+        <h4>ORDER SUMMARY</h4>
+        <h3>
+          "I drink my coffee as <span>{pickedOption.option1}</span>. with a{' '}
+          <span>{pickedOption.option2}</span> type of bean.{' '}
+          <span>{pickedOption.option3}</span> ground ala{' '}
+          <span>{pickedOption.option4}</span>, sent to me{' '}
+          <span>{pickedOption.option5}</span>."
+        </h3>
+      </div>
+      <div id='order-button'>
+        <button>Create my plan!</button>
       </div>
     </div>
   );

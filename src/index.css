@@ -615,3 +615,42 @@ p {
   background: var(--dark-cyan);
   color: var(--light-cream);
 }
+
+#order-summary {
+  margin: 0 1.5em 3.5em;
+  background: #2c343e;
+  border-radius: 10px;
+  padding: 2em 1.5em;
+  color: #ffffff;
+}
+
+#order-summary h4 {
+  font-family: var(--secondary-font);
+  font-size: 1em;
+  color: var(--grey);
+  font-weight: 400;
+  line-height: 26px;
+}
+
+#order-summary span,
+#order-summary h3 {
+  background: none;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+#order-summary span {
+  color: var(--dark-cyan);
+}
+
+#order-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 7.5em;
+  line-height: 25px;
+}
+
+#order-button button {
+  padding: 1em 2em;
+  font-size: 18px;
+}

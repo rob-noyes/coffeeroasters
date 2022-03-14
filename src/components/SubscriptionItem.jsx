@@ -6,6 +6,7 @@ export const SubscriptionItem = ({
   coffeeDetails,
   pickedOption,
   setPickedOption,
+  option,
 }) => {
   const [options, setOptions] = useState(true);
 
@@ -15,15 +16,11 @@ export const SubscriptionItem = ({
 
   //when an item is clicked, add to picked options
   const coffeeValue = (e) => {
-    console.log(e);
     //If value is selected, delete old value, add new value
-    setPickedOption({
-      option1: e,
-      option2: '',
-      option3: '',
-      option4: '',
-      option5: '',
-    });
+    setPickedOption((prevState) => ({
+      ...prevState,
+      [option]: e,
+    }));
   };
 
   return (
