@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Footer = () => {
   return (
@@ -6,13 +7,19 @@ export const Footer = () => {
       <img src='./assets/shared/desktop/logo-white.svg' alt='' />
       <ul>
         <li>
-          <p>HOME</p>
+          <Link to='/'>
+            <p>HOME</p>
+          </Link>
         </li>
         <li>
-          <p>ABOUT US</p>
+          <Link to='/about-us'>
+            <p>ABOUT US</p>
+          </Link>
         </li>
         <li>
-          <p>CREATE YOUR PLAN</p>
+          <Link to='/subscribe'>
+            <p>CREATE YOUR PLAN</p>
+          </Link>
         </li>
       </ul>
       <div>

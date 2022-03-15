@@ -11,7 +11,7 @@ export const Subscribe = () => {
     option5: 'Every week',
   });
 
-  const [checkout, setCheckout] = useState(true);
+  const [checkout, setCheckout] = useState(false);
 
   const toggleCheckout = () => {
     setCheckout(!checkout);

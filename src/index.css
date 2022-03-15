@@ -26,6 +26,9 @@
   line-height: 4.5rem;
   color: var(--grey);
 }
+a {
+  background: none;
+}
 
 h1 {
   font-size: 4.5rem;
@@ -146,6 +149,50 @@ header {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .hamburgerMenu {
+    display: none;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menuButton {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  .disabled {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .disabled > ul {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .disabled h4 {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    font-family: var(--secondary-font);
+    color: var(--grey);
+    padding: 0 16px;
+    letter-spacing: 0.923077px;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 268px;
+  }
+}
+
 /********** 
   FOOTER
 ***********/
@@ -170,9 +217,10 @@ footer > img {
 
 footer > ul > li {
   padding: 12px;
+  background: #2c343e;
 }
 
-footer > ul > li > p {
+footer > ul > li a p {
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 12px;
@@ -183,11 +231,19 @@ footer > ul > li > p {
 }
 
 footer div {
-  background: inherit;
+  background: #2c343e;
 }
 
 footer > div > img {
   padding: 48px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  footer > ul {
+    background: none;
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /********** 
@@ -234,6 +290,32 @@ footer > div > img {
   padding: 7.5em 2em 0;
 }
 
+@media screen and (min-width: 768px) {
+  #create-plan {
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    background: url('./assets/home/tablet/image-hero-coffeepress.jpg');
+    background-size: cover;
+    margin: 60px 40px;
+    padding: 104px 200px 104px 97px;
+  }
+
+  #create-plan > h2 {
+    font-size: 48px;
+  }
+
+  #create-plan > p {
+    padding-left: 0;
+  }
+
+  #create-plan > button {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 16px 32px;
+  }
+}
+
 /********** 
   HOME - COLLECTIONS
 ***********/
@@ -263,11 +345,60 @@ footer > div > img {
   margin-bottom: 2em;
 }
 
-.collection-item > p {
+.collection-item p {
   padding-top: 1em;
   font-family: var(--secondary-font);
   font-size: 15px;
   line-height: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  #collection {
+    position: relative;
+    margin-top: 144px;
+  }
+
+  #collection > h1 {
+    font-size: 96px;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(rgba(254, 252, 247 0.0001) 0%, #fefcf7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  #collection > div {
+    position: relative;
+    top: -70px;
+    background: none;
+  }
+
+  .collection-item {
+    display: flex;
+    flex-direction: row;
+    padding: 0 66px 32px;
+    justify-content: center;
+    align-items: flex-start;
+    background: none;
+  }
+
+  .collection-item > div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    top: 0;
+    background: none;
+    padding: 0 0 0 32px;
+  }
+
+  .collection-item h4 {
+    padding: 20px 0 0;
+  }
+
+  .collection-item > img {
+    width: 255px;
+    padding-left: 28px;
+  }
 }
 
 /********** 
@@ -284,8 +415,6 @@ footer > div > img {
 #why-choose-us > #why-copy {
   background: #2c343e;
   border-radius: 10px;
-  width: 100%;
-  height: 100%;
   color: var(--light-cream);
   text-align: center;
   padding: 4em 1.5em 661px 1.5em;
@@ -306,6 +435,7 @@ footer > div > img {
   font-weight: normal;
   mix-blend-mode: normal;
   opacity: 0.8;
+  padding: 0;
 }
 
 #benefit {
@@ -336,7 +466,8 @@ footer > div > img {
 
 .benefit-item h3,
 img,
-p {
+p,
+.benefit-item div {
   background: none;
 }
 
@@ -353,6 +484,58 @@ p {
   line-height: 25px;
 }
 
+@media screen and (min-width: 768px) {
+  #why-choose-us {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    margin-bottom: 434px;
+  }
+
+  #why-choose-us > #why-copy {
+    padding: 4em 74px 400px;
+    margin: 0 40px;
+  }
+  #why-choose-us > #why-copy > h3 {
+    font-size: 32px;
+    line-height: 48px;
+  }
+
+  #why-choose-us > #why-copy > p {
+    padding: 0 24px;
+  }
+
+  #benefit {
+    top: 50%;
+  }
+
+  .benefit-item {
+    padding: 40px 72px;
+    border-radius: 0.5em;
+    flex-direction: row;
+    text-align: left;
+    margin: 0 97px;
+  }
+
+  .benefit-item > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 56px;
+  }
+
+  .benefit-item h3 {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0 0 1em;
+  }
+
+  .benefit-item img {
+    width: 56px;
+    height: auto;
+  }
+}
+
 /********** 
   HOME - PLAN 
 ***********/
@@ -362,6 +545,12 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.dot-path {
+  display: none;
+  height: 0;
+  width: 0;
 }
 
 #how-it-works > h4 {
@@ -400,6 +589,80 @@ p {
   font-family: var(--secondary-font);
   font-size: 15px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  #how-it-works {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 40px;
+  }
+
+  #how-it-works > h4 {
+    margin-bottom: 20px;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .dot-path {
+    display: flex;
+    height: 100%;
+    width: 72%;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  .line {
+    position: absolute;
+    width: 100%;
+    border: 1px solid var(--pale-orange);
+  }
+
+  .circles {
+    top: -12px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: none;
+  }
+
+  .circle {
+    border: 2px solid #0e8784;
+    border-radius: 30px;
+    height: 32px;
+    width: 32px;
+    z-index: 1;
+    background: #ffffff;
+  }
+
+  .planItem {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    text-align: left;
+    padding-right: 10px;
+    max-width: 32%;
+  }
+
+  .planItem > p {
+    line-height: 25px;
+  }
+
+  .planItem > h2 {
+    padding: 42px 24px 38px 0;
+    line-height: 32px;
+  }
+
+  #how-it-works > button {
+    margin: 44px 0 120px 0;
+  }
 }
 
 /********** 
@@ -669,7 +932,6 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -681,6 +943,7 @@ p {
   flex-direction: column;
   justify-content: center;
   margin: 2em 1.5em;
+  z-index: 1;
 }
 
 .checkout h2 {

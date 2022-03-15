@@ -17,26 +17,28 @@ function Home() {
       </div>
       <div id='collection'>
         <h1>our collection</h1>
-        <CollectionItem
-          title='Gran Espresso'
-          text='Light and flavorful blend with cocoa and black pepper for an intense experience'
-          img='./assets/home/desktop/image-gran-espresso.png'
-        />
-        <CollectionItem
-          title='Planalto'
-          text='Brazilian dark roast with rich and velvety body, and hints of fruits and nuts'
-          img='./assets/home/desktop/image-planalto.png'
-        />
-        <CollectionItem
-          title='Piccollo'
-          text='Mild and smooth blend featuring notes of toasted almond and dried cherry'
-          img='./assets/home/desktop/image-piccollo.png'
-        />
-        <CollectionItem
-          title='Danche'
-          text='Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
-          img='./assets/home/desktop/image-danche.png'
-        />
+        <div>
+          <CollectionItem
+            title='Gran Espresso'
+            text='Light and flavorful blend with cocoa and black pepper for an intense experience'
+            img='./assets/home/desktop/image-gran-espresso.png'
+          />
+          <CollectionItem
+            title='Planalto'
+            text='Brazilian dark roast with rich and velvety body, and hints of fruits and nuts'
+            img='./assets/home/desktop/image-planalto.png'
+          />
+          <CollectionItem
+            title='Piccollo'
+            text='Mild and smooth blend featuring notes of toasted almond and dried cherry'
+            img='./assets/home/desktop/image-piccollo.png'
+          />
+          <CollectionItem
+            title='Danche'
+            text='Ethiopian hand-harvested blend densely packed with vibrant fruit notes'
+            img='./assets/home/desktop/image-danche.png'
+          />
+        </div>
       </div>
       <div id='why-choose-us'>
         <div id='why-copy'>
@@ -68,22 +70,32 @@ function Home() {
       </div>
       <div id='how-it-works'>
         <h4>How it works</h4>
-        <PlanItem
-          number='01'
-          title='Pick your coffee'
-          text='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'
-        />
-        <PlanItem
-          number='02'
-          title='Choose the frequency'
-          text='Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.'
-        />
-        <PlanItem
-          number='03'
-          title='Receive and enjoy!'
-          text='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
+        <div className='dot-path'>
+          <div className='line'></div>
+          <div className='circles'>
+            <div className='circle'></div>
+            <div className='circle'></div>
+            <div className='circle'></div>
+          </div>
+        </div>
+        <div className='plan'>
+          <PlanItem
+            number='01'
+            title='Pick your coffee'
+            text='Select from our evolving range of artisan coffees. Our beans are ethically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.'
+          />
+          <PlanItem
+            number='02'
+            title='Choose the frequency'
+            text='Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.'
+          />
+          <PlanItem
+            number='03'
+            title='Receive and enjoy!'
+            text='We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning 
           world-class coffees curated to provide a distinct tasting experience.'
-        />
+          />
+        </div>
         <button>Create your plan</button>
       </div>
     </div>

@@ -8,13 +8,17 @@ const Header = () => {
     setMenu(!menu);
   };
 
+  const closeMenu = () => {
+    setMenu(false);
+  };
+
   return (
     <header>
       <div className='header'>
         <div>
           <img src='./assets/shared/desktop/logo.svg' alt='' className='logo' />
         </div>
-        <div onClick={toggleMenu}>
+        <div className='menuButton' onClick={toggleMenu}>
           <img
             src={
               menu
@@ -29,17 +33,17 @@ const Header = () => {
       <div className={menu ? 'hamburgerMenu' : 'disabled'}>
         <ul>
           <li>
-            <Link to='/' onClick={toggleMenu}>
+            <Link to='/' onClick={closeMenu}>
               <h4>Home</h4>
             </Link>
           </li>{' '}
           <li>
-            <Link to='/about-us' onClick={toggleMenu}>
+            <Link to='/about-us' onClick={closeMenu}>
               <h4>About Us</h4>
             </Link>
           </li>{' '}
           <li>
-            <Link to='/subscribe' onClick={toggleMenu}>
+            <Link to='/subscribe' onClick={closeMenu}>
               <h4>Create Your Plan</h4>
             </Link>
           </li>
