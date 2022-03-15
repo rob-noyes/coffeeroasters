@@ -4,15 +4,21 @@ import coffeeDetails from '../components/coffeeDetails.json';
 
 export const Subscribe = () => {
   const [pickedOption, setPickedOption] = useState({
-    option1: '',
-    option2: '',
-    option3: '',
-    option4: '',
-    option5: '',
+    option1: 'Filter',
+    option2: 'Decaf',
+    option3: '250g',
+    option4: 'Cafetiére',
+    option5: 'Every week',
   });
 
+  const [checkout, setCheckout] = useState(true);
+
+  const toggleCheckout = () => {
+    setCheckout(!checkout);
+  };
+
   return (
-    <div>
+    <div className={checkout ? 'constant' : ''}>
       <div id='subscribe-landing'>
         <h2>Create a plan</h2>
         <p>
@@ -90,7 +96,7 @@ export const Subscribe = () => {
       <div id='order-summary'>
         <h4>ORDER SUMMARY</h4>
         <h3>
-          "I drink my coffee as <span>{pickedOption.option1}</span>. with a{' '}
+          "I drink my coffee as <span>{pickedOption.option1}</span>, with a{' '}
           <span>{pickedOption.option2}</span> type of bean.{' '}
           <span>{pickedOption.option3}</span> ground ala{' '}
           <span>{pickedOption.option4}</span>, sent to me{' '}
@@ -98,7 +104,25 @@ export const Subscribe = () => {
         </h3>
       </div>
       <div id='order-button'>
-        <button>Create my plan!</button>
+        <button onClick={toggleCheckout}>Create my plan!</button>
+      </div>
+      <div className={checkout ? 'checkout' : 'checkout-none'}>
+        <div>
+          <h2>Order Summary</h2>
+          <h3>
+            "I drink my coffee as <span>{pickedOption.option1}</span>, with a{' '}
+            <span>{pickedOption.option2}</span> type of bean.{' '}
+            <span>{pickedOption.option3}</span> ground ala{' '}
+            <span>{pickedOption.option4}</span>, sent to me{' '}
+            <span>{pickedOption.option5}</span>."
+          </h3>
+          <p>
+            Is this correct? You can proceed to checkout or go back to plan
+            selection if something is off. Subscription discount codes can also
+            be redeemed at the checkout.{' '}
+          </p>
+          <button onClick={toggleCheckout}>Checkout - $14.00/mo</button>
+        </div>
       </div>
     </div>
   );
